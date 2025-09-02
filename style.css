@@ -1,0 +1,334 @@
+/*
+  Hoja de estilos para la página web de Grupo GOE Inmobiliaria.
+  Se han elegido tonos neutros con acentos en azul oscuro para transmitir
+  seriedad y confianza.  Las imágenes de fondo se adaptan
+  responsivamente y los elementos de navegación se fijan en la parte
+  superior del sitio para facilitar la navegación.
+*/
+
+:root {
+    /* Paleta revisada: tonos neutros con azul corporativo y acentos en naranja */
+    --color-primary: #14213d;      /* azul profundo inspirado en el logotipo */
+    --color-secondary: #f7f9fc;    /* tono neutro muy claro para fondos */
+    --color-accent: #f08700;       /* naranja para destacar elementos interactivos */
+    --color-text: #2c3e50;         /* gris azulado oscuro para textos */
+    --spacing: 1rem;
+    --max-width: 1200px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-text);
+    background-color: var(--color-secondary);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: var(--spacing) 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+/* Ajuste del logotipo: invertimos los colores para asegurar contraste
+   sobre el encabezado oscuro y limitamos su tamaño para mantener
+   armonía visual */
+header .logo {
+    /* Limitar el tamaño del logotipo para que se integre mejor en el encabezado */
+    width: 64px;
+    height: auto;
+}
+
+header .tagline {
+    margin: 0.3rem 0 1rem 0;
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav li {
+    margin: 0 0.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 0.8rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    font-size: 0.9rem;
+    display: block;
+}
+
+nav a:hover {
+    /* Al pasar el ratón por un enlace del menú, se destaca con un fondo
+       semitransparente en el color de acento */
+    background-color: rgba(240, 135, 0, 0.2);
+}
+
+.hero {
+    background-image: url('land.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 6rem 0;
+    text-align: center;
+    position: relative;
+}
+
+/* oscurecer imagen de fondo para mayor legibilidad del texto */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.45);
+}
+
+.hero-text {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.section {
+    padding: 4rem 1rem;
+    background-color: var(--color-secondary);
+}
+
+.section-alt {
+    background-color: #ffffff;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-size: 1.8rem;
+}
+
+.section p {
+    max-width: var(--max-width);
+    margin: 0 auto 2rem;
+    text-align: center;
+}
+
+/* Tarjetas de oficinas */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-body h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+    font-size: 1.2rem;
+}
+
+.card-body p {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+.card-body ul {
+    list-style: disc inside;
+    font-size: 0.85rem;
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+}
+
+/* Propiedades individuales (departamento, terreno y local) */
+.property {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.property-image img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+}
+
+/* Galería de imágenes para el local comercial */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 0.5rem;
+}
+
+.gallery img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.property-info {
+    flex: 1;
+    max-width: 600px;
+}
+
+.property-info h3 {
+    margin-top: 0;
+    color: var(--color-primary);
+    font-size: 1.4rem;
+}
+
+.property-info ul {
+    list-style: disc inside;
+    margin: 0.5rem 0 1rem 0;
+    padding-left: 1rem;
+    font-size: 0.9rem;
+}
+
+.property-info p {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+/* Información de contacto */
+.contact-info {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.contact-info a {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+/* Estilo del logotipo en el encabezado */
+.logo {
+    width: 60px;
+    height: auto;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+}
+
+/* Responsividad */
+@media (min-width: 768px) {
+    .property {
+        flex-direction: row;
+    }
+    .property-image, .property-info {
+        flex: 1;
+    }
+    .hero h2 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.1rem;
+    }
+}
+
+/* Estilo para botones de llamada a la acción */
+.button {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+}
+.button:hover {
+    background-color: #e07d00;
+}

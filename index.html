@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupo GOE Inmobiliaria – Inicio</title>
+    <link rel="stylesheet" href="style.css">
+    <!--
+      Página principal del sitio web de Grupo GOE Inmobiliaria.  Aquí se
+      presenta una breve introducción de la empresa, seguida de un
+      catálogo general con los inmuebles disponibles en Puebla y
+      Acapulco.  Cada tarjeta del catálogo enlaza a una página
+      individual con más detalles e imágenes específicas de cada
+      propiedad.  Los colores y tipografías siguen la línea
+      corporativa definida en la hoja de estilos para transmitir
+      confianza y profesionalismo.
+    -->
+</head>
+<body>
+    <!-- Encabezado con logotipo y navegación básica -->
+    <header>
+        <div class="container header-content">
+            <img src="logo.png" alt="Logo de GOE Inmobiliaria" class="logo">
+            <h1>Grupo GOE Inmobiliaria</h1>
+            <p class="tagline">Trato directo con los propietarios – precios justos y transparencia</p>
+            <nav>
+                <ul>
+                    <li><a href="#quienes">¿Quiénes somos?</a></li>
+                    <li><a href="#catalogo">Catálogo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sección hero con imagen panorámica de Acapulco -->
+    <section class="hero" style="background-image: url('cima_view1.jpg');">
+        <div class="hero-text">
+            <h2>Bienvenido a Grupo GOE</h2>
+            <p>Unimos personas con su próximo hogar u oportunidad de inversión.  Explora nuestras opciones de renta y venta en Puebla y Acapulco, todas gestionadas directamente por sus dueños.</p>
+        </div>
+    </section>
+
+    <!-- Sección Quiénes somos -->
+    <section id="quienes" class="section">
+        <div class="container">
+            <h2>¿Quiénes somos?</h2>
+            <div class="property">
+                <div class="property-image">
+                    <!-- Imagen ilustrativa de la misión de la empresa: un par de llaves para simbolizar bienes raíces -->
+                    <img src="quienes_keys.png" alt="Llaves y hogar">
+                </div>
+                <div class="property-info">
+                    <p>Grupo GOE Inmobiliaria es una empresa familiar dedicada a la renta y venta de inmuebles en los estados de Puebla y Guerrero.  Nuestro objetivo es generar negocios justos, accesibles y transparentes, donde cada cliente encuentre una oportunidad real de inversión o vivienda.</p>
+                    <p>Creemos en la importancia del trato directo y personalizado, por eso acompañamos a cada persona de forma cercana, entendiendo sus necesidades y ofreciendo soluciones que se ajusten a su presupuesto y estilo de vida.  Nuestra experiencia, compromiso y atención hacen la diferencia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección catálogo general -->
+    <section id="catalogo" class="section section-alt">
+        <div class="container">
+            <h2>Catálogo de inmuebles</h2>
+            <p>Descubre nuestras propiedades disponibles.  Selecciona una opción para obtener más información y ver imágenes detalladas.</p>
+            <div class="cards">
+                <!-- Card oficinas -->
+                <div class="card">
+                    <img src="nexus_edificio.jpg" alt="Oficinas en la Torre Nexus">
+                    <div class="card-body">
+                        <h3>Oficinas en Puebla</h3>
+                        <p>Conjunto de tres oficinas en renta en la Torre Nexus.  Espacios modernos con vistas panorámicas.</p>
+                        <ul>
+                            <li>Metrajes desde 48.92 m² hasta 59.50 m²</li>
+                            <li>Vistas a Avenida Las Torres y La Vista Country Club</li>
+                            <li>Renta directa con propietarios</li>
+                        </ul>
+                        <a href="oficinas.html" class="button">Más información</a>
+                    </div>
+                </div>
+                <!-- Card departamento -->
+                <div class="card">
+                    <img src="albore1.jpg" alt="Departamento Il Albore">
+                    <div class="card-body">
+                        <h3>Departamento Il Albore</h3>
+                        <p>Departamento amueblado en renta orientado a estudiantes, ubicado en la zona de universidades en Puebla.</p>
+                        <ul>
+                            <li>3 recámaras y 2 baños</li>
+                            <li>Estacionamiento para dos autos</li>
+                            <li>Cercanía a universidades y centros comerciales</li>
+                        </ul>
+                        <a href="departamento.html" class="button">Más información</a>
+                    </div>
+                </div>
+                <!-- Card terreno -->
+                <div class="card">
+                    <img src="cima_view2.jpg" alt="Terreno en Acapulco">
+                    <div class="card-body">
+                        <h3>Terreno La Cima, Acapulco</h3>
+                        <p>Predio de 1,569 m² con vista panorámica a la bahía.  Oportunidad de construir un proyecto de lujo.</p>
+                        <ul>
+                            <li>Vista a la bahía de Acapulco</li>
+                            <li>Acceso por dos calles</li>
+                            <li>Alta plusvalía y entorno privado</li>
+                        </ul>
+                        <a href="terreno.html" class="button">Más información</a>
+                    </div>
+                </div>
+                <!-- Card local -->
+                <div class="card">
+                    <img src="llano_plaza.jpg" alt="Local comercial en Acapulco">
+                    <div class="card-body">
+                        <h3>Local Llano Largo</h3>
+                        <p>Espacio comercial con barra, cocina y estacionamiento en una plaza de alto flujo vehicular.</p>
+                        <ul>
+                            <li>Superficie de 74 m²</li>
+                            <li>Dos cajones de estacionamiento</li>
+                            <li>Instalaciones de agua, gas y electricidad</li>
+                        </ul>
+                        <a href="local.html" class="button">Más información</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de contacto -->
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Si deseas obtener más información sobre alguno de nuestros inmuebles, programar una visita o negociar condiciones de venta/renta, ponte en contacto con nosotros.  Al tratar directamente con los propietarios podemos ofrecerte condiciones competitivas y un proceso ágil.</p>
+            <div class="contact-info">
+                <p><strong>Teléfonos:</strong> 
+                    <a href="tel:+5217443235364">+52 1 744 323 5364</a> (principal) / 
+                    <a href="tel:+522225631869">+52 222 563 1869</a> (secundario)
+                </p>
+                <p><strong>Correo electrónico:</strong> <a href="mailto:goeinmobiliaria@outlook.com">goeinmobiliaria@outlook.com</a></p>
+                <p><strong>Horario de atención:</strong> Lunes a viernes, 9:00 – 18:00 h</p>
+                <p><strong>Ubicaciones:</strong> Puebla – San Bernardino Tlaxcalancingo y Acapulco – Llano Largo</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Grupo GOE Inmobiliaria.  Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
